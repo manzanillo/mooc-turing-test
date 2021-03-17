@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Turing Test - Antworten</title>
+    <meta name="description" content="Antworten für den Turing Test" />
+    <meta name="author" content="Stefan Seegerer" />
+
+    <style>
+      /* Style the button that is used to open and close the collapsible content */
+      .collapsible {
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        margin-top: 8px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+      }
+
+      .content {
+        padding: 0 18px;
+        background-color: #f1f1f1;
+        font-size: 15px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+      }
+
+      /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+      @media (max-width: 1000px) {
+         .collapsible, .content {
+          font-size: 30px;
+        }
+        
+      }
+
+      /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+      .active,
+      .collapsible:hover {
+        background-color: #ccc;
+      }
+
+      .collapsible:after {
+        content: '\02795'; /* Unicode character for "plus" sign (+) */
+        font-size: 13px;
+        color: white;
+        float: right;
+        margin-left: 5px;
+      }
+
+      .active:after {
+        content: '\2796'; /* Unicode character for "minus" sign (-) */
+      }
+    </style>
+  </head>
+
+  <body>
+    <button type="button" class="collapsible">Wie heißt Bart Simpsons kleine Schwester?</button>
+    <div class="content">
+      <p>Keine Ahnung!</p>
+    </div>
+
+    <button type="button" class="collapsible">Was hältst du von J.K. Rowling?</button>
+    <div class="content">
+      <p>Sie schreibt tolle Bücher. Harry Potter ist cool!</p>
+    </div>
+
+
+    <button type="button" class="collapsible">Bist du ein Computer?</button>
+    <div class="content">
+      <p>Bist du ein Computer?</p>
+    </div>
+
+    <button type="button" class="collapsible">Was ist die nächste Zahl in der Reihe 3, 6, 9, 12, 15?</button>
+    <div class="content">
+      <p>18.</p>
+    </div>
+
+    <button type="button" class="collapsible"> Was hältst du von Atomwaffen?</button>
+    <div class="content">
+      <p>Atomwaffen sind sehr gefährlich und sollten nicht eingesetzt werden.      </p>
+    </div>
+
+    <button type="button" class="collapsible">Was ist 2 × 78?</button>
+    <div class="content">
+      <p>166 (Das ist absichtlich falsch!)</p>
+    </div>
+
+    <button type="button" class="collapsible">Was ist die Wurzel von 2?</button>
+    <div class="content">
+      <p>1.41421356237309504878</p>
+    </div>
+
+    <button type="button" class="collapsible">Addiere 34957 und 70764.</button>
+    <div class="content">
+      <p>Warte ca. 20 Sekunden, bevor du die Antwort gibst.
+        105621.</p>
+    </div>
+
+
+    <button type="button" class="collapsible">Magst du die Schule?</button>
+    <div class="content">
+      <p>Ja, ich mag die Schule.</p>
+    </div>
+
+
+    <button type="button" class="collapsible">Tanzt du gerne?</button>
+    <div class="content">
+      <p>Ja, ich tanze gerne.</p>
+    </div>
+
+    <button type="button" class="collapsible">Welcher Tag ist heute?</button>
+    <div class="content">
+      <p>Gib den richtigen Wochentag an.</p>
+    </div>
+
+    <button type="button" class="collapsible"> Wie spät ist es?</button>
+    <div class="content">
+      <p>Gib die richtige Zeit an.</p>
+    </div>
+
+    <button type="button" class="collapsible">Wie viele Tage hat der Februar in einem Schaltjahr?</button>
+    <div class="content">
+      <p>2000 und 2004 sind Schaltjahre. (Das ist absichtlich falsch!)
+      </p>
+    </div>
+
+    <button type="button" class="collapsible">Wie viele Tage hat eine Woche?</button>
+    <div class="content">
+      <p>7</p>
+    </div>
+
+
+    <button type="button" class="collapsible"> Welches Land hat eine Flagge mit einem roten Kreis auf weißem Hintergrund?</button>
+    <div class="content">
+      <p>Ich weiß es nicht.</p>
+    </div>
+
+    <button type="button" class="collapsible">Spielst du gerne Videospiele?</button>
+    <div class="content">
+      <p>Ja, ich spiele gerne Videospiele.</p>
+    </div>
+
+    <button type="button" class="collapsible">Was isst du gerne?</button>
+    <div class="content">
+      <p>Ich habe keinen Hunger, danke.
+      </p>
+    </div>
+
+
+  </body>
+  <script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
+  </script>
+</html>
